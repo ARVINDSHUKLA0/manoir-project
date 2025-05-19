@@ -1,0 +1,22 @@
+.product-warpper{
+    height: 400px;
+    width: 100%;
+}
+.product-warpper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.product-home-postion{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+@media (min-width: 0px) and (max-width: 525px) {
+  .product-warpper{
+    height: 300px;
+    width: 100%;
+}
+}
