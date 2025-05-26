@@ -14,7 +14,7 @@ const Footer = () => {
                                 <li className='list-style-none text-uppercase fs-12 py-1'>locate a gallery</li>
                                 <li className='list-style-none text-uppercase fs-12 py-1'>view catalogue</li>
                                 <li className='list-style-none text-uppercase fs-12 py-1'>request a catalogue</li>
-                                <li className='list-style-none text-uppercase fs-12 py-1'>rh members program </li>
+                                <li className='list-style-none text-uppercase fs-12 py-1'>monoir members program </li>
                                  </ul>
                             </ul>
                       </div>
@@ -26,8 +26,8 @@ const Footer = () => {
                                     <li className='list-style-none text-uppercase fs-12 py-1 '>placing an order</li>
                                     <li className='list-style-none text-uppercase fs-12 py-1 '>shipping & delivery</li>
                                     <li className='list-style-none text-uppercase fs-12 py-1 '>return & exchanges</li>
-                                    <li className='list-style-none text-uppercase fs-12 py-1'>rh gift card</li>
-                                    <li className='list-style-none text-uppercase fs-12 py-1 '>faqs</li>
+                                    <li className='list-style-none text-uppercase fs-12 py-1'>monoir gift card</li>
+                                    <li className='list-style-none fs-12 py-1 '>FAQs</li>
                                  </ul>
                             </ul>
                       </div>
@@ -49,10 +49,6 @@ const Footer = () => {
                                  <ul className='m-0 p-0'>
                                     <li className='list-style-none text-uppercase fs-12 py-1'>privacy</li>
                                     <li className='list-style-none text-uppercase fs-12 py-1'>terms of use</li>
-                                    <li className='list-style-none text-uppercase fs-12 py-1'>text messaging terms</li>
-                                    <li className='list-style-none text-uppercase fs-12 py-1'>rh in canada</li>
-                                    <li className='list-style-none text-uppercase fs-12 py-1'>cpra opt-out</li>
-                                    <li className='list-style-none text-uppercase fs-12 py-1'>safety recalls</li>
                                  </ul>
                             </ul>
                       </div>

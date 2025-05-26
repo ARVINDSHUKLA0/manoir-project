@@ -9,6 +9,7 @@ import ProductOne from '/assets/img/Product1.webp'
 import ProductTwo from '/assets/img/Product2.webp'
 import ProductThree from '/assets/img/Product3.webp'
 import Footer from '../Component/Footer';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   
@@ -52,10 +53,12 @@ const Home = () => {
                 <div className='product-warpper'>
                   <img src={item.ProdcutImg} alt="" />
                 </div>
-                <div className='product-home-postion'>
-                  <p className='text-uppercase text-white fs-6 fw-bolder'>{item.name}</p>
-                  <button className='px-4 py-2 border-0 text-uppercase fs-12 fw-bold'>view products</button>
-                </div>
+                <h5 className='text-uppercase my-2'>seasonal sakura</h5>
+                <h4 className='text-capitalize'>Japan</h4>
+                <p className=' py-2 m-0'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis molestias aliquam amet, deleniti molestiae asperiores culpa porro praesentium exercitationem reprehenderit! Placeat quod nesciunt veniam. Molestiae impedit doloremque tempora laudantium porro fuga ratione sequi nemo. Fugiat excepturi praesentium dolore commodi recusandae.</p>
+                <p>
+                  <Link className='text-dark text-capitalize m-0 p-0'>discover over</Link>
+                </p>
               </div>
             ))
           }
