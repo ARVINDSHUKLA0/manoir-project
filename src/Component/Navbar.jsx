@@ -12,25 +12,20 @@ function Navbar() {
   const { menu, toggleMenu } = useContext(MenuContext);
   const location = useLocation();
 
-  const whitePaths = ['/', '/about'];
+  const whitePaths = ['/']; 
   const isWhiteTheme = whitePaths.includes(location.pathname);
-
   const currentLogo = isWhiteTheme ? LogoWhite : LogoBlack;
   const textColorClass = isWhiteTheme ? 'text-white' : 'text-black';
 
   useEffect(() => {
     const handleScroll = () => {
-      if (isWhiteTheme) {
-        setScrolled(true);
-      } else {
-        setScrolled(window.scrollY > 50);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [location.pathname, menu]);
+  }, [location.pathname]);
 
   const sidebarVariants = {
     hidden: { opacity: 0, x: '-100%' },
@@ -38,48 +33,50 @@ function Navbar() {
       opacity: 1,
       x: '0px',
       transition: {
-        when: "beforeChildren",
+        when: 'beforeChildren',
         staggerChildren: 0.1,
         duration: 0.5,
-      }
+      },
     },
     exit: {
       opacity: 0,
       x: '-100%',
       transition: {
-        when: "afterChildren",
+        when: 'afterChildren',
         duration: 0.5,
-        ease: "easeInOut"
-      }
-    }
+        ease: 'easeInOut',
+      },
+    },
   };
 
   const liVariants = {
     hidden: { opacity: 0, x: 100 },
     visible: { opacity: 1, x: 0 },
-    exit: { opacity: 0 }
+    exit: { opacity: 0 },
   };
 
   return (
     <>
       <CartSidebar />
-      <nav className={`rolls-navbar ${scrolled && !menu ? 'scrolled' : ''}`}>
-        <div className="container-fluid">
-          <div className="row align-items-center">
-            <div className="col-3">
-              {!menu && (
-                <Link onClick={toggleMenu}>
-                  <i className={`fa-solid fa-bars fs-22 ${textColorClass}`}></i>
+      <nav className={`rolls-navbar ${!isWhiteTheme ? 'not-home' : ''} ${scrolled && !menu ? 'scrolled' : ''}`}>
+        <div className="container"> 
+          <div className="navbar-content">
+            <div className="row align-items-center">
+              <div className="col-3">
+                {!menu && (
+                  <Link onClick={toggleMenu} to="#">
+                    <i className={`fa-solid fa-bars fs-22 ${textColorClass}`}></i>
+                  </Link>
+                )}
+              </div>
+              <div className="col-6 text-center">
+                <Link to="/">
+                  <img className="img-fluid logo-img" src={currentLogo} alt="Logo" />
                 </Link>
-              )}
-            </div>
-            <div className="col-6 text-center">
-              <Link to="/">
-                <img className="img-fluid logo-img" src={currentLogo} alt="Logo" />
-              </Link>
-            </div>
-            <div className="col-3 text-end">
-              <p className={`fs-15 mb-0 p-0 ${textColorClass}`}>Membership Program</p>
+              </div>
+              <div className="col-3 text-end">
+                <p className={`fs-15 mb-0 p-0 ${textColorClass}`}>Membership Program</p>
+              </div>
             </div>
           </div>
         </div>
