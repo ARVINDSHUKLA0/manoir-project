@@ -83,8 +83,7 @@
 .text-black {
   color: black !important;
 }
-
-/* Responsive */
+ 
 @media (max-width: 525px) {
   .logo-img {
     max-width: 60px;
