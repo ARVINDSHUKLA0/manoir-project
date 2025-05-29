@@ -60,6 +60,9 @@
   left: 0;
   z-index: 9998;
   cursor: pointer;
+    display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 .asidebarOpen {
@@ -74,6 +77,7 @@
   padding: 20px;
   z-index: 9999;
   width: 32%;
+
 }
 
 .text-white {
