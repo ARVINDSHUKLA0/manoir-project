@@ -73,9 +73,7 @@
   color: white;
   padding: 20px;
   z-index: 9999;
-  width: 32%;   
-    display: inline-grid;
-  align-items: center;
+  width: 32%;    
 }
 
 .text-white {
