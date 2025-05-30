@@ -155,13 +155,13 @@ function Navbar() {
                 exit="exit"
               >
                 <div>
-                  <button
+                  <Link
                     onClick={handleCloseClick}
-                    className="bg-transparent border-0 fs-2 text-white"
+                    className="bg-transparent border-0 fs-2 text-white text-decoration-none"
                     aria-label="Close menu"
                   >
                     ×
-                  </button>
+                  </Link>
                 </div>
 
                 <motion.ul

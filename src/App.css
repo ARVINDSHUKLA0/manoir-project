@@ -12,9 +12,12 @@ body{
     background-color: black;
     color: white;
 }
-.cursor-pointer{
-    cursor: pointer;
+/* index.css ya App.css */
+body { 
+    cursor: none;
 }
+
+ 
 .list-style-none{
     list-style: none;
 }

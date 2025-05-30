@@ -11,6 +11,7 @@ import CategoryView from './Pages/CategoryView';
 import { AddTocart } from './Context/Addtocart';
 import { MenuProvider } from './Context/MenuProvider';
 import { DataAddtocart } from './Context/DataAddtoCart';
+import CustomCursor from './CustomCursor';
 
 function App() {
 
@@ -24,11 +25,12 @@ function App() {
 
 
   return (
-    <>
+    <> 
       <DataAddtocart>
         <MenuProvider>
           <AddTocart>
             <BrowserRouter>
+            <CustomCursor/>
               <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/category' element={<Category />} />
@@ -37,7 +39,7 @@ function App() {
             </BrowserRouter>
           </AddTocart>
         </MenuProvider>
-      </DataAddtocart>
+      </DataAddtocart> 
     </>
   )
 }
