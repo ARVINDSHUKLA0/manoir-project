@@ -12,7 +12,7 @@ import Footer from '../Component/Footer';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  
+
   const ProductArr = [
     { id: 1, ProdcutImg: ProductOne, name: "kintsu" },
     { id: 1, ProdcutImg: ProductTwo, name: "bird" },
@@ -45,7 +45,7 @@ const Home = () => {
       <Navbar />
       <Banner />
 
-      <section className='py-lg-5 py-3'>
+      <section className='py-lg-5 custom-block-bg'>
         <Slider {...ProductSlider} r>
           {
             ProductArr.map((item, index) => (
@@ -53,19 +53,21 @@ const Home = () => {
                 <div className='product-warpper'>
                   <img src={item.ProdcutImg} alt="" />
                 </div>
-                <h5 className='text-uppercase my-2'>seasonal sakura</h5>
-                <h4 className='text-capitalize'>Japan</h4>
-                <p className=' py-2 m-0'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis molestias aliquam amet, deleniti molestiae asperiores culpa porro praesentium exercitationem reprehenderit! Placeat quod nesciunt veniam. Molestiae impedit doloremque tempora laudantium porro fuga ratione sequi nemo. Fugiat excepturi praesentium dolore commodi recusandae.</p>
-                <p>
-                  <Link className='text-dark text-capitalize m-0 p-0'>discover over</Link>
-                </p>
+                <div className='border-left-custom'>
+                  <h5 className='text-uppercase py-2'>seasonal sakura</h5>
+                  <h4 className='text-capitalize'>Japan</h4>
+                  <p className=' py-2 m-0'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis molestias aliquam amet, deleniti molestiae asperiores culpa porro praesentium exercitationem reprehenderit! Placeat quod nesciunt veniam. Molestiae impedit doloremque tempora laudantium porro fuga ratione sequi nemo. Fugiat excepturi praesentium dolore commodi recusandae.</p>
+                  <p>
+                    <Link className=' text-white text-capitalize m-0 p-0'>discover over</Link>
+                  </p>
+                </div>
               </div>
             ))
           }
         </Slider>
       </section>
 
-      <Footer/>
+      <Footer />
 
     </>
   )

@@ -94,7 +94,6 @@ function Navbar() {
     'Living Lounge',
     'Office Space',
     'Entertainment Area',
-    'Kids Room',
   ];
 
   const handleCloseClick = () => {
@@ -102,16 +101,15 @@ function Navbar() {
     setTimeout(() => {
       toggleMenu();
       setIsClosing(false);
-    }, 40);    
+    }, 40);
   };
 
   return (
     <>
       <CartSidebar />
       <nav
-        className={`rolls-navbar ${!isWhiteTheme ? 'not-home' : ''} ${
-          scrolled && !menu ? 'scrolled' : ''
-        }`}
+        className={`rolls-navbar ${!isWhiteTheme ? 'not-home' : ''} ${scrolled && !menu ? 'scrolled' : ''
+          }`}
       >
         <div className="container">
           <div className="navbar-content">
@@ -148,6 +146,7 @@ function Navbar() {
                 exit={{ opacity: 0 }}
               />
 
+
               <motion.aside
                 className="asidebarOpen"
                 variants={sidebarVariants}
@@ -155,13 +154,15 @@ function Navbar() {
                 animate={isClosing ? 'exit' : 'visible'}
                 exit="exit"
               >
-                <button
-                  onClick={handleCloseClick}
-                  className="bg-transparent border-0 fs-2 text-white"
-                  aria-label="Close menu"
-                >
-                  ×
-                </button>
+                <div>
+                  <button
+                    onClick={handleCloseClick}
+                    className="bg-transparent border-0 fs-2 text-white"
+                    aria-label="Close menu"
+                  >
+                    ×
+                  </button>
+                </div>
 
                 <motion.ul
                   className="text-end my-lg-3"
